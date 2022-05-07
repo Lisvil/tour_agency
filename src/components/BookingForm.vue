@@ -2,7 +2,7 @@
   <div class="booking">
     <div id="darken"></div>
     <div id = "success_booking" v-show="successBooking == true">
-      <div>
+      <div>     
         <p>Тур успішно заброньовано</p>
         <button id="ok" @click='hideForm'>OK</button>
       </div>
