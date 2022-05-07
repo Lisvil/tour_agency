@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  padding: 10px 50px;
+  margin-bottom: 130px;
+
+  .nav-bar {
+    width: 20%;
+    padding: 20px;
+    margin-top: 70px;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f0f0f0;
+    .nav-bar-item {
+      padding: 8px;
+      margin-bottom: 10px;
+      background-color: #e2e7eb;
+      color: #3d7985;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      &:hover {
+        background-color: #fff;
+        p {
+          color: #00b7c8;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+  .lists_part {
+    width: 80%;
+    .lists_part_nav {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0px 20px;
+      button {
+        border-radius: 7px;
+        padding: 10px 15px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #f0f0f0;
+        border: 1px solid #00b7c8;
+        color: #00b7c8;
+        cursor: pointer;
+        transition: all 0.7s ease;
+        margin: 0 20px;
+        &:hover {
+          border-color: darken(#00b7c8, 20);
+          color: darken(#00b7c8, 20);
+        }
+      }
+      .active {
+        border-color: darken(#00b7c8, 20);
+        background: #ebebeb;
+        color: darken(#00b7c8, 20);
+      }
+    }
+    .lists_part_tourists_info {
+      margin-top: 30px;
+      margin-left: 10px;
+      .tourists_info_header {
+        background: #e6eaed;
+        padding: 15px;
+        border-radius: 7px;
+        th {
+          color: #3d7985;
+          padding: 5px 8px;
+          width: 12.25%;
+
+        }
+      }
+      table {
+        width: 100%;
+        th:nth-child(1) {
+          width: 2%;
+        }
+        td {
+          border: 1px solid #e8e8e8;
+          background: #f0f0f0;
+          padding: 5px;
+        }
+        td:nth-child(1) {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+}
+.tour_active {
+  // background-color: #e8e8e8!important;
+  // color: #00b7c8!important;
+  background: #ebebeb!important;
+  color: darken(#00b7c8, 20)!important;
+  pointer-events: none;
+  // background: #ced1d5!important;
+  // color: #445f89!important;
+}
