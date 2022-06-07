@@ -2,7 +2,7 @@
   <div class="booking">
     <div id="darken"></div>
     <div id = "success_booking" v-show="successBooking == true">
-      <div>     
+      <div>
         <p>Тур успішно заброньовано</p>
         <button id="ok" @click='hideForm'>OK</button>
       </div>
@@ -101,7 +101,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this.successBooking);
   },
   methods: {
     hideForm() {
@@ -124,29 +123,6 @@ export default {
       this.bookedTourClientInfo.tourVisa = this.checkedVisa;
     },
     bookTour() {
-      // let isEmpty = false;
-      // for(let item of Object.values(this.bookedTourClientInfo)) {
-      //   if (item.length == 0 ) {
-      //     isEmpty = true;
-      //   } else {
-      //     isEmpty = false;
-      //     break;
-      //   }
-      // }
-      // if(isEmpty) {
-      //   let input = document.querySelectorAll(".person_inf input");
-      //   input.forEach((item) => {
-      //     item.classList.add('error');
-      //     this.errorText = 'Заповніть поля форми'
-      //     return;
-      //   });
-      // } else {
-      //   this.errorText = '';
-      //   let input = document.querySelectorAll(".person_inf input");
-      //   input.forEach((item) => {
-      //     item.classList.remove('error');
-      //   });
-      // }
 
       if (this.bookedTourClientInfo.surname.length < 2) {
         document.querySelector("#surname").classList.add('error');
@@ -225,5 +201,11 @@ export default {
   }
   #success_booking {
     display: flex;
+    padding: 20px 10px;
+    justify-content: center;
+    div {
+      padding: 15px;
+      height: auto;
+    }
   }
 </style>
